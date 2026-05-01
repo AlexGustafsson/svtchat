@@ -236,7 +236,7 @@ func iterMessages(query *firestore.QuerySnapshotIterator) (iter.Seq[ChatMessage]
 			if err == iterator.Done {
 				break
 			} else if err != nil {
-				slog.Error("Failed to get nest snapshot", slog.Any("error", err))
+				slog.Error("Failed to get next snapshot", slog.Any("error", err))
 				return
 			}
 
